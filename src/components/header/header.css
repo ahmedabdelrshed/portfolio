@@ -1,0 +1,130 @@
+header.flex {
+    justify-content: space-between;
+    padding: 0 2.4rem;
+    margin-top: 1.2rem;
+}
+
+header nav {
+    background-color: var(--bgHeader);
+    padding: 0.77rem 1.6rem;
+    border-radius: 55px;
+    box-shadow: 1px 1px 40px #2323242a;
+}
+
+header ul.flex {
+    gap: 16px;
+}
+
+header ul li a {
+    color: var(--title);
+    opacity: 0.9;
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+header ul li a:hover {
+    color: var(--blue);
+    opacity: 1;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+header button.icon {
+    background-color: var(--bgHeader);
+    color: var(--subtitle);
+    width: 2.4rem;
+    height: 2.4rem;
+
+    border-radius: 50%;
+    align-items: center;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgba(250, 128, 114, 0.205);
+}
+
+header button.icon:hover {
+    transition: 0.3s;
+    border-color: rgba(250, 128, 114, 0.575);
+    color: var(--title);
+}
+
+header .menu {
+    display: none;
+}
+
+/* Modal Pop */
+header .fixed {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(40, 40, 48, 0.91);
+}
+
+/* Animation */
+@keyframes modal {
+    0% {
+        scale: 0;
+    }
+
+    60% {
+        scale: 1.2;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+header .fixed .modal {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    background-color: var(--secondary);
+    padding: 1rem 2rem;
+    animation: modal 0.67s 1;
+}
+
+header .fixed .modal li {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.77rem;
+    padding-top: 0.5rem;
+}
+
+header .fixed .modal li a {
+    font-size: 1rem;
+}
+
+header .fixed .modal li:last-child {
+    border-bottom: none;
+}
+
+header .fixed .modal li:first-child {
+    text-align: right !important;
+    border-bottom: none;
+    padding: 0;
+    padding-top: 0.2rem;
+
+}
+
+header .fixed .modal .icon-clear {
+    color: var(--subtitle);
+    font-size: 1.5rem;
+    transition: 0.2s;
+}
+header .fixed .modal .icon-clear:hover{
+    font-size: 1.8rem;
+    color: crimson;
+    rotate: 180deg;
+}
+
+@media(max-width:700px) {
+    header nav {
+        display: none;
+    }
+
+    header .menu {
+        display: block;
+    }
+}
