@@ -1,0 +1,7 @@
+:root{
+ --Theme:#fff; 
+}
+
+body{
+  background-color: var(--Theme);
+}
