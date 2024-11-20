@@ -57,6 +57,9 @@ header .fixed {
     position: fixed;
     inset: 0;
     background-color: rgba(40, 40, 48, 0.91);
+    z-index: 999;
+    /* make a background blur */
+    backdrop-filter: blur(4px);
 }
 
 /* Animation */
