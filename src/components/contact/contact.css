@@ -40,13 +40,16 @@ section.contact-us #massage {
 }
 
 section.contact-us #email:focus,
-section.contact-us #massage:focus {
-    border: 1px solid rgb(45 212 191);
-}
-
+section.contact-us #massage:focus,
 section.contact-us #email:hover,
 section.contact-us #massage:hover {
     border: 1px solid rgb(45 212 191);
+}
+.light section.contact-us #email:focus,
+.light section.contact-us #massage:focus,
+.light section.contact-us #email:hover,
+.light section.contact-us #massage:hover {
+    border: 1px solid rgb(5, 15, 15);
 }
 
 section.contact-us button[type="submit"] {
@@ -66,6 +69,11 @@ section.contact-us button[type="submit"]:hover {
 
 }
 
+.light section.contact-us #email,
+.light section.contact-us #massage {
+    background-color: rgba(255, 255, 255, 0.902);
+    color: black;
+}
 
 /* Responsive Design */
 @media(max-width:550px) {

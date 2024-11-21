@@ -30,6 +30,9 @@ main.flex .buttons button.active {
     padding: 0.8rem 0;
     border: 1px solid var(--blue);
 }
+.light main.flex .buttons button.active {
+    border: 1px solid #333;
+}
 
 main.flex .projects {
     flex-grow: 1;
@@ -46,7 +49,10 @@ main.flex .projects {
     background-image: linear-gradient(rgba(255, 255, 255, 0.05),
             rgba(255, 255, 255, 0.05));
 }
-
+.light .card {
+    border: none;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.16);
+}
 .card:hover {
     border: 1px solid var(--blue);
     rotate: 1deg;

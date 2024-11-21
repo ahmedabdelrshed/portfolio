@@ -40,6 +40,7 @@ header button.icon {
     display: flex;
     justify-content: center;
     border: 1px solid rgba(250, 128, 114, 0.205);
+    box-shadow: 1px 1px 10px #b5b3b3;
 }
 
 header button.icon:hover {
@@ -51,7 +52,9 @@ header button.icon:hover {
 header .menu {
     display: none;
 }
-
+.light .icon-sun{
+    color: orange;
+}
 /* Modal Pop */
 header .fixed {
     position: fixed;

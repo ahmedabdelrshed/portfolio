@@ -52,7 +52,7 @@ const Header = () => {
         </ul>
       </nav>
       <button className="icon" onClick={switchTheme}>
-        {theme === "dark" ? <IoMoonOutline /> : <GrSun />}
+        {theme === "dark" ? <IoMoonOutline /> : <GrSun  className="icon-sun"/>}
       </button>
       {isModalOpen && (
         <div className="fixed">
