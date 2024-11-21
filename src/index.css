@@ -3,7 +3,30 @@
 html {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.1px;
+  scroll-behavior: smooth;
 }
+
+/* Scroll bar Design */
+::-webkit-scrollbar {
+  width: 0.8rem;
+  background-color: #333;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #333;
+  border-radius: 4px;
+}
+
+/* End Scroll bar Design */
 
 * {
   margin: 0;
@@ -68,6 +91,27 @@ button:active {
   align-items: center;
 }
 
+/* scroll */
+.scroll {
+  background-color: rgba(25, 118, 210, 0.85);
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 2rem;
+  right: 3%;
+  text-align: center;
+  font-size: 1.2rem;
+  transition: 0.3s;
+  color: white;
+}
+
+.scroll:hover {
+  background-color: rgba(25, 118, 210);
+}
+
+/* Responsive Design */
+
 @media(max-width:1000px) {
   .container {
     width: 90%;
@@ -82,4 +126,13 @@ button:active {
     --container-padding: 1rem
   }
 
+  .scroll {
+    opacity: 0.6;
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .scroll:hover {
+    opacity: 0.8;
+  }
 }
