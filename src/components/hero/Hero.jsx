@@ -1,7 +1,5 @@
 import { MdVerified } from "react-icons/md";
 import "./hero.css";
-import { FaFacebook, FaGithub } from "react-icons/fa";
-import { IoLogoLinkedin, IoLogoWhatsapp } from "react-icons/io5";
 import { ImFacebook2, ImWhatsapp } from "react-icons/im";
 import { SiLinkedin } from "react-icons/si";
 import { VscGithubInverted } from "react-icons/vsc";
