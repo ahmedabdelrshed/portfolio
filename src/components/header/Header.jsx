@@ -1,12 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./header.css";
 import { IoClose, IoMoonOutline } from "react-icons/io5";
 import { IoMdMenu } from "react-icons/io";
+import { GrSun } from "react-icons/gr";
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
+  useEffect(() => {
+    if (theme === "dark") {
+      document.body.classList.remove("light");
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+      document.body.classList.add("light");
+    }
+  }, [theme]);
+  // Handlers
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
+  };
+  const switchTheme = () => {
+    localStorage.setItem("theme", theme === "dark" ? "light" : "dark");
+    setTheme(theme === "dark" ? "light" : "dark");
   };
   return (
     <header className="flex">
@@ -36,15 +51,17 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <button className="icon">
-        <IoMoonOutline />
+      <button className="icon" onClick={switchTheme}>
+        {theme === "dark" ? <IoMoonOutline /> : <GrSun />}
       </button>
       {isModalOpen && (
         <div className="fixed">
           <div className="modal">
             <ul className="">
               <li>
-              <button className="icon-clear"><IoClose  onClick={toggleModal} /></button>
+                <button className="icon-clear">
+                  <IoClose onClick={toggleModal} />
+                </button>
               </li>
               <li>
                 <a href="#">Home</a>

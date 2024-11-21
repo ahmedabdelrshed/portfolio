@@ -32,7 +32,7 @@ main.flex .buttons button.active {
 }
 
 main.flex .projects {
-    /* flex-grow: 1; */
+    flex-grow: 1;
     flex-wrap: wrap;
     justify-content: center;
     column-gap: 16px;
