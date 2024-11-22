@@ -1,5 +1,6 @@
 section.hero {
     margin-top: 2rem;
+    justify-content: space-between;
 }
 
 section.hero .hero-content {
@@ -48,4 +49,13 @@ section.hero .hero-content .social-icons a {
 section.hero .hero-content .social-icons a:hover{
     font-size: 1.4rem;
     color: var(--icon-hover );
+}
+.hero .animation{
+    width: 100%;
+    transform: 100px 50px;
+}
+@media(max-width:1200px){
+    .hero .animation{
+        display: none;
+    }
 }

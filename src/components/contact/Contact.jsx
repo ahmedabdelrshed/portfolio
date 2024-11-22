@@ -2,7 +2,8 @@ import { MdEmail } from "react-icons/md";
 import "./contact.css";
 import { useForm, ValidationError } from "@formspree/react";
 import Lottie from "lottie-react";
-import doneanimation from "../../../public/animation/done.json";
+import doneanimation from "../../animation/done.json";
+import contact from "../../animation/contact.json";
 const Contact = () => {
   const [state, handleSubmit] = useForm("mzzbvoep");
 
@@ -16,7 +17,7 @@ const Contact = () => {
         Contact us for more information and Get notified when I publish
         something new.
       </p>
-      <div className="flex">
+      <div style={{justifyContent:"space-between"}} className="flex">
         <form action="" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="email">Email Address:</label>
@@ -52,7 +53,7 @@ const Contact = () => {
             </p>
           )}
         </form>
-        <div className="animation"></div>
+        <div className="animation"> <Lottie animationData={contact} className="contact-animation" style={{height:355}}/></div>
       </div>
     </section>
   );

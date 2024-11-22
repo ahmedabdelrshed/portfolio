@@ -5,6 +5,8 @@ import { IoMdArrowForward } from "react-icons/io";
 import { useState } from "react";
 import { Projects, projectsTypes } from "../../Data";
 import { textSlicer } from "../../utils/functions";
+import { AnimatePresence, motion } from "framer-motion";
+
 export const Main = () => {
   const [selectedProjectType, setSelectedProjectType] =
     useState("All Projects");
@@ -33,28 +35,39 @@ export const Main = () => {
         ))}
       </section>
       <section className="projects flex">
-        {filteredProjects.map((project) => (
-          <div className="card" key={project.id}>
-            <img src={`${project.image}`} alt="" width={266} />
-            <div className="card-content" style={{ width: "266px" }}>
-              <h1 className="title">{project.title}</h1>
-              <p className="description">{textSlicer(project.description,123)}</p>
-              <div className="flex icons">
-                <div className="flex" style={{ gap: "11px" }}>
-                  <a href={`${project.url}`} target="_blank">
-                    <ImLink />
-                  </a>
-                  <a href={`${project.github}`} target="_blank">
-                    <VscGithubInverted />
+        <AnimatePresence>
+          {filteredProjects.map((project) => (
+            <motion.div
+              layout
+              animate={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
+             transition={{type:"spring" , damping:8,stiffness:50}}
+              className="card"
+              key={project.id}
+            >
+              <img src={`${project.image}`} alt="" width={266} />
+              <div className="card-content" style={{ width: "266px" }}>
+                <h1 className="title">{project.title}</h1>
+                <p className="description">
+                  {textSlicer(project.description, 123)}
+                </p>
+                <div className="flex icons">
+                  <div className="flex" style={{ gap: "11px" }}>
+                    <a href={`${project.url}`} target="_blank">
+                      <ImLink />
+                    </a>
+                    <a href={`${project.github}`} target="_blank">
+                      <VscGithubInverted />
+                    </a>
+                  </div>
+                  <a href="" className="flex link">
+                    more <IoMdArrowForward style={{ alignSelf: "end" }} />
                   </a>
                 </div>
-                <a href="" className="flex link">
-                  more <IoMdArrowForward style={{ alignSelf: "end" }} />
-                </a>
               </div>
-            </div>
-          </div>
-        ))}
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </section>
     </main>
   );

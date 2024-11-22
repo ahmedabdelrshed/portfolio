@@ -133,4 +133,7 @@ header .fixed .modal .icon-clear:hover {
     header .menu {
         display: block;
     }
+    header.flex{
+        padding: 0 0.5rem;
+    }
 }
