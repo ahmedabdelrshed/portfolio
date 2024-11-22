@@ -46,16 +46,31 @@ section.hero .hero-content .social-icons a {
     font-size: 1.3rem;
     transition: 0.3s;
 }
-section.hero .hero-content .social-icons a:hover{
+
+section.hero .hero-content .social-icons a:hover {
     font-size: 1.4rem;
-    color: var(--icon-hover );
+    color: var(--icon-hover);
 }
-.hero .animation{
+
+.hero .animation {
     width: 100%;
     transform: 100px 50px;
 }
-@media(max-width:1200px){
-    .hero .animation{
+
+@media(max-width:1200px) {
+    .hero .animation {
         display: none;
+    }
+}
+
+@media(max-width:600px) {
+    section.hero .hero-content .title {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+
+    section.hero .hero-content p.sub-title {
+        font-size: 0.7rem;
+        line-height: 1.1rem;
     }
 }

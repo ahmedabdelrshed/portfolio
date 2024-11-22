@@ -12,18 +12,22 @@ const Hero = () => {
     <section className="hero flex">
       <div className="hero-content">
         <div className="hero-avatar">
-          <motion.img 
-           initial={{transform:"scale(0,0)"}}
-           animate={{transform:"scale(1,1)"}}
-           transition={{ damping: 6,type:"spring",stiffness:80 }}
-          src="./avatar-img.png" className="avatar" alt="" />
+          <motion.img
+            initial={{ transform: "scale(0,0)" }}
+            animate={{ transform: "scale(1,1)" }}
+            transition={{ damping: 6, type: "spring", stiffness: 80 }}
+            src="./avatar-img.png"
+            className="avatar"
+            alt=""
+          />
           <MdVerified className="avatar-icon" />
         </div>
-        <motion.h1 
-        initial={{transform:"scale(0,0)"}}
-        animate={{transform:"scale(1,1)"}}
-        transition={{ duration: 1,ease:"linear " }}
-        className="title">
+        <motion.h1
+          initial={{ transform: "scale(0,0)" }}
+          animate={{ transform: "scale(1,1)" }}
+          transition={{ duration: 1, ease: "linear " }}
+          className="title"
+        >
           Software Developer, React JS, TypeScript
         </motion.h1>
         <p className="sub-title">
@@ -34,16 +38,22 @@ const Hero = () => {
           out if you&apos;d like to discuss a project or hire me!
         </p>
         <div className="social-icons flex">
-          <a href="">
+          <a
+            href="https://www.facebook.com/profile.php?id=100024575770751&mibextid=ZbWKwL"
+            target="_blank"
+          >
             <ImFacebook2 />{" "}
           </a>
-          <a href="">
+          <a
+            href="https://www.linkedin.com/in/ahmed-abdelrashed"
+            target="_blank"
+          >
             <SiLinkedin />{" "}
           </a>
-          <a href="">
+          <a href="https://wa.me/+201090281995" target="_blank">
             <ImWhatsapp />{" "}
           </a>
-          <a href="">
+          <a href="https://github.com/ahmedabdelrshed" target="_blank">
             <VscGithubInverted />{" "}
           </a>
         </div>
