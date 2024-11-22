@@ -75,6 +75,9 @@ section.contact-us button[type="submit"]:hover {
     background-color: rgba(255, 255, 255, 0.902);
     color: black;
 }
+.light section.contact-us form p {
+    color: #333;
+}
 
 /* Responsive Design */
 @media(max-width:1200px) {
