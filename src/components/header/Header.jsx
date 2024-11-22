@@ -35,24 +35,24 @@ const Header = () => {
       <nav>
         <ul className="flex">
           <li>
-            <a href="#">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="#about">About</a>
           </li>
           <li>
-            <a href="#">Projects</a>
+            <a href="#projects">Projects</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
           <li>
-            <a href="#">Articles</a>
+            <a href="#home">Articles</a>
           </li>
         </ul>
       </nav>
       <button className="icon" onClick={switchTheme}>
-        {theme === "dark" ? <IoMoonOutline /> : <GrSun  className="icon-sun"/>}
+        {theme === "dark" ? <IoMoonOutline /> : <GrSun className="icon-sun" />}
       </button>
       {isModalOpen && (
         <div className="fixed">
@@ -64,19 +64,19 @@ const Header = () => {
                 </button>
               </li>
               <li>
-                <a href="#">Home</a>
+                <a href="#home">Home</a>
               </li>
               <li>
-                <a href="#">About</a>
+                <a href="#about">About</a>
               </li>
               <li>
-                <a href="#">Projects</a>
+                <a href="#projects">Projects</a>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <a href="#contact">Contact</a>
               </li>
               <li>
-                <a href="#">Articles</a>
+                <a href="#home">Articles</a>
               </li>
             </ul>
           </div>

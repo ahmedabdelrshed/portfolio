@@ -8,7 +8,7 @@ const Contact = () => {
   const [state, handleSubmit] = useForm("mzzbvoep");
 
   return (
-    <section className="contact-us">
+    <section className="contact-us" id='contact'>
       <h1 className="title">
         <MdEmail className="icon" />
         Contact us

@@ -22,7 +22,7 @@ export const Main = () => {
     }
   };
   return (
-    <main className="flex">
+    <main className="flex" id="projects">
       <section className="buttons flex">
         {projectsTypes.map((type) => (
           <button

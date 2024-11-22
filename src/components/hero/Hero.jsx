@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="hero flex">
+    <section className="hero flex" id='about'>
       <div className="hero-content">
         <div className="hero-avatar">
           <motion.img
